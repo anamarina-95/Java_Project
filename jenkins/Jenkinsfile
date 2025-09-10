@@ -69,8 +69,7 @@ pipeline {
         stage('Build Docker Image') {
 	    steps {
 		sh 'cp /root/jenkins/workspace/$JOB_NAME/target/ABCtechnologies-1.0.war /root/jenkins/workspace/$JOB_NAME/'
-		sh 'docker build -t ABCtechnologies:$BUILD_NUMBER .'
-		sh 'docker tag ABCtechnologies:$BUILD_NUMBER docker.io/anamarina95/ABCtechnologies:$BUILD_NUMBER'
+		sh 'docker build --file Dockerfile --tag docker.io/anamarina95/ABCtechnologies:$BUILD_NUMBER .'
 	    }
 	}
 
