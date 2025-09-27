@@ -1,3 +1,2 @@
 [Prod]
-44.220.83.152 ansible_user=devops  ansible_ssh_pass=today@1234
-3.239.117.135 ansible_user=devops  ansible_ssh_pass=today@1234
+3.90.225.173 ansible_user=devops  ansible_ssh_pass=today@1234
