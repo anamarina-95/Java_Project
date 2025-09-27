@@ -81,11 +81,6 @@ pipeline {
 	    }
 	}
 
-	#stage('Deploy as container') {
-	    #steps {
-		#sh 'docker run -itd -P anamarina95/abctechnologies:$BUILD_NUMBER'
-	    #}
-	#}
         stage('deploy-Prod') {
             steps {
                 sh script: 'ansible-playbook --inventory $WORKSPACE/inv $WORKSPACE/deploy/deploy-kube.yml --extra-vars "env=Prod build=$BUILD_NUMBER"'
